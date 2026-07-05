@@ -1,0 +1,13 @@
+{
+    "name": "harikrut/hk-media-optimizer",
+    "description": "HK Media Optimizer",
+    "require": {
+        "woocommerce/action-scheduler": "^3.6"
+    },
+    "authors": [
+        {
+            "name": "Harikrut Technolab",
+            "email": "harikruttech@gmail.com"
+        }
+    ]
+}

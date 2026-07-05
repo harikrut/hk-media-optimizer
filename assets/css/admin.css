@@ -1,0 +1,259 @@
+/* HK Media Optimizer - Admin Styles */
+
+.hkmo-wrap {
+	max-width: 1100px;
+}
+
+.hkmo-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.hkmo-title .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+}
+
+.hkmo-subtitle {
+	color: #555;
+	font-size: 14px;
+	margin-top: 4px;
+}
+
+/* Summary cards */
+.hkmo-summary-cards {
+	display: flex;
+	gap: 16px;
+	margin: 20px 0;
+}
+
+.hkmo-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 16px 20px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.hkmo-card-number {
+	font-size: 28px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.hkmo-card-label {
+	font-size: 13px;
+	color: #646970;
+	margin-top: 4px;
+}
+
+/* Actions bar */
+.hkmo-actions-bar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 20px 0;
+	flex-wrap: wrap;
+}
+
+.hkmo-batch-note {
+	color: #646970;
+	font-size: 12px;
+	margin-left: 8px;
+}
+
+/* Progress bar */
+.hkmo-progress-wrap {
+	margin: 20px 0;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 16px 20px;
+}
+
+.hkmo-progress-bar {
+	width: 100%;
+	height: 18px;
+	background: #f0f0f1;
+	border-radius: 9px;
+	overflow: hidden;
+}
+
+.hkmo-progress-fill {
+	height: 100%;
+	width: 0%;
+	background: #2271b1;
+	transition: width 0.3s ease;
+}
+
+.hkmo-progress-text {
+	margin: 10px 0;
+	font-size: 13px;
+	color: #1d2327;
+}
+
+/* Results */
+.hkmo-results-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0 10px;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.hkmo-tabs {
+	display: flex;
+	gap: 4px;
+}
+
+.hkmo-tab {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 6px 14px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.hkmo-tab.active {
+	background: #2271b1;
+	color: #fff;
+	border-color: #2271b1;
+}
+
+.hkmo-bulk-actions {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.hkmo-select-all-label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+}
+
+.hkmo-table-container {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.hkmo-table .hkmo-col-check {
+	width: 36px;
+}
+
+.hkmo-table .hkmo-col-thumb {
+	width: 60px;
+}
+
+.hkmo-table img.hkmo-thumb {
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: 3px;
+	display: block;
+}
+
+.hkmo-no-thumb {
+	width: 40px;
+	height: 40px;
+	background: #f0f0f1;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #a7aaad;
+}
+
+.hkmo-filename {
+	font-weight: 600;
+	display: block;
+}
+
+.hkmo-file-meta {
+	color: #646970;
+	font-size: 12px;
+}
+
+.hkmo-pagination {
+	margin-top: 14px;
+	display: flex;
+	gap: 6px;
+	justify-content: flex-end;
+}
+
+.hkmo-pagination button {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+
+.hkmo-pagination button.active {
+	background: #2271b1;
+	color: #fff;
+	border-color: #2271b1;
+}
+
+.hkmo-empty-state {
+	background: #fff;
+	border: 1px dashed #dcdcde;
+	border-radius: 4px;
+	padding: 40px;
+	text-align: center;
+	color: #646970;
+}
+
+/* Modal */
+.hkmo-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100000;
+}
+
+.hkmo-modal {
+	background: #fff;
+	border-radius: 6px;
+	padding: 24px;
+	max-width: 460px;
+	width: 90%;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hkmo-modal h2 {
+	margin-top: 0;
+}
+
+.hkmo-modal-warning {
+	color: #b32d2e;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.hkmo-modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+#hkmo-confirm-input {
+	width: 100%;
+	margin-top: 6px;
+}

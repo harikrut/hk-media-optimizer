@@ -40,17 +40,14 @@ require_once HKMO_PLUGIN_DIR . 'includes/class-hkmo-duplicate-finder.php';
 require_once HKMO_PLUGIN_DIR . 'includes/class-hkmo-exporter.php';
 
 /**
- * Load Composer dependencies and Action Scheduler.
- * Action Scheduler does not natively support Composer autoloading,
- * so its initialization file must be explicitly required alongside vendor/autoload.php.
+ * Load Action Scheduler.
+ *
+ * Action Scheduler is designed to be safely bundled in multiple plugins.
+ * By requiring its main file directly, it natively registers its version
+ * and ensures only the most recent bundled version across all active plugins
+ * is initialized, preventing fatal errors and version conflicts.
  */
-$composer_autoload = HKMO_PLUGIN_DIR . 'vendor/autoload.php';
-$action_scheduler  = HKMO_PLUGIN_DIR . 'vendor/woocommerce/action-scheduler/action-scheduler.php';
-
-if ( file_exists( $composer_autoload ) && file_exists( $action_scheduler ) ) {
-	require_once $composer_autoload;
-	require_once $action_scheduler;
-}
+require_once HKMO_PLUGIN_DIR . 'vendor/woocommerce/action-scheduler/action-scheduler.php';
 
 require_once HKMO_PLUGIN_DIR . 'includes/class-hkmo-scheduler.php';
 

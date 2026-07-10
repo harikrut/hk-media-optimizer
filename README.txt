@@ -93,10 +93,11 @@ Scheduled scans rely on WordPress's built-in cron, which only fires on a site vi
 
 == Screenshots ==
 
-1. Scanner page with progress bar and summary cards.
-2. Results table with filtering between "Unused," "In Use," and "Duplicates" media.
-3. Duplicate finder showing grouped files with reclaimable space.
-4. Settings page showing all configurable scan sources, safety rules, and scheduled scan options.
+1. Scanner page with real-time progress tracking, summary cards, and scan status for unused media files.
+2. Unused Media page listing all unused attachments with bulk actions, file details, and safe deletion options.
+3. In-Use Media page showing media currently referenced across your website, along with the exact usage location.
+4. Duplicate Finder displaying grouped duplicate files, reclaimable storage space, and tools to safely remove redundant copies.
+5. Settings page with configurable scan sources, post status filters, safety rules, performance tuning, scheduled scans, and deletion safeguards.
 
 == Changelog ==
 

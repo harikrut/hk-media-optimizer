@@ -103,13 +103,13 @@ class HKMO_Admin {
 			'hkmo_admin',
 			'hkmoData',
 			array(
-				'ajaxUrl'             => admin_url( 'admin-ajax.php' ),
-				'nonce'               => wp_create_nonce( 'hkmo_admin_nonce' ),
-				'exportUrl'           => admin_url( 'admin-post.php' ),
-				'exportNonce'         => wp_create_nonce( 'hkmo_export_csv' ),
-				'isScannerPage'       => ( $hook === $this->page_hook ),
-				'requireTypeConfirm'  => (bool) HKMO_Settings::get( 'require_type_confirm' ),
-				'i18n'                => array(
+				'ajaxUrl'            => admin_url( 'admin-ajax.php' ),
+				'nonce'              => wp_create_nonce( 'hkmo_admin_nonce' ),
+				'exportUrl'          => admin_url( 'admin-post.php' ),
+				'exportNonce'        => wp_create_nonce( 'hkmo_export_csv' ),
+				'isScannerPage'      => ( $hook === $this->page_hook ),
+				'requireTypeConfirm' => (bool) HKMO_Settings::get( 'require_type_confirm' ),
+				'i18n'               => array(
 					'confirmDelete'        => __( 'Type DELETE to confirm permanent removal of the selected files.', 'hk-media-optimizer' ),
 					'deleteMismatch'       => __( 'Text did not match. Deletion cancelled.', 'hk-media-optimizer' ),
 					'scanning'             => __( 'Scanning…', 'hk-media-optimizer' ),

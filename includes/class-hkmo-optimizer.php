@@ -60,7 +60,7 @@ class HKMO_Optimizer {
 		$verified_ids = array();
 		$size_map     = array();
 		foreach ( $verified_rows as $row ) {
-			$verified_ids[]                       = (int) $row->attachment_id;
+			$verified_ids[]                        = (int) $row->attachment_id;
 			$size_map[ (int) $row->attachment_id ] = (int) $row->file_size;
 		}
 

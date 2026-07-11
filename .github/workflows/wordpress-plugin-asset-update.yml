@@ -2,13 +2,14 @@ name: WP Plugin README update
 on:
   push:
     branches:
-    - master
+    - main
+
 jobs:
-  trunk:
-    name: Push to trunk
+  main:
+    name: Push to main branch
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
     - name: WP Plugin README update
       uses: 10up/action-wordpress-plugin-asset-update@develop
       env:

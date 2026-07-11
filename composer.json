@@ -1,13 +1,34 @@
 {
     "name": "harikrut/hk-media-optimizer",
     "description": "HK Media Optimizer",
-    "require": {
-        "woocommerce/action-scheduler": "^3.6"
-    },
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Harikrut Technolab",
-            "email": "harikruttech@gmail.com"
+            "email": "info@harikrut.com",
+            "homepage": "https://www.harikrut.com/"
         }
-    ]
+    ],
+    "require": {
+        "woocommerce/action-scheduler": "^3.6"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpcs:compat": "phpcs --standard=PHPCompatibilityWP --runtime-set testVersion 7.4-",
+        "lint-fix": "phpcbf"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }

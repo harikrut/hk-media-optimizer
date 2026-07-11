@@ -39,8 +39,7 @@ npm install        # linting + local environment tooling
    ```
 4. Open a pull request against `develop` describing what changed and why. Reference any related issue.
 
-Code should follow the [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/) enforced by [`phpcs.xml`](phpcs.xml), stay compatible with PHP 7.4+, and use the `hkmo`/`HKMO`
-prefix and the `hk-media-optimizer` text domain.
+Code should follow the [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/) enforced by [`phpcs.xml`](phpcs.xml), stay compatible with PHP 7.4+, and use the `hkmo`/`HKMO` prefix and the `hk-media-optimizer` text domain.
 
 ## License
 

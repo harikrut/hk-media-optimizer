@@ -14,16 +14,16 @@
  */
 
 // Exit if accessed directly.
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define('HKMO_VERSION', '1.0.0');
-define('HKMO_PLUGIN_FILE', __FILE__);
-define('HKMO_PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('HKMO_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('HKMO_DB_VERSION', '1.1');
-define('HKMO_TABLE_NAME', 'hkmo_scan_results');
+define( 'HKMO_VERSION', '1.0.0' );
+define( 'HKMO_PLUGIN_FILE', __FILE__ );
+define( 'HKMO_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'HKMO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'HKMO_DB_VERSION', '1.1' );
+define( 'HKMO_TABLE_NAME', 'hkmo_scan_results' );
 
 /**
  * Composer-free, lightweight autoloading of plugin classes.
@@ -56,22 +56,21 @@ require_once HKMO_PLUGIN_DIR . 'includes/class-hkmo-scheduler.php';
  * Front-end page loads never touch this plugin's code, by design,
  * since media cleaning is purely an admin task.
  */
-if (is_admin()) {
+if ( is_admin() ) {
 	require_once HKMO_PLUGIN_DIR . 'admin/class-hkmo-admin.php';
 }
 
 /**
  * Activation / deactivation hooks.
  */
-register_activation_hook(__FILE__, array('HKMO_Activator', 'activate'));
-register_deactivation_hook(__FILE__, array('HKMO_Deactivator', 'deactivate'));
+register_activation_hook( __FILE__, array( 'HKMO_Activator', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'HKMO_Deactivator', 'deactivate' ) );
 
 /**
  * Boot the plugin.
  */
-function hkmo_run()
-{
-	if (is_admin()) {
+function hkmo_run() {
+	if ( is_admin() ) {
 		$admin = new HKMO_Admin();
 		$admin->init();
 	}
@@ -91,15 +90,13 @@ hkmo_run();
  * before the duplicate-finder feature (and its dedicated table) existed.
  * dbDelta() is idempotent, so this is a cheap no-op once everyone's current.
  */
-function hkmo_maybe_upgrade_db()
-{
-	if (get_option('hkmo_db_version') === HKMO_DB_VERSION) {
+function hkmo_maybe_upgrade_db() {
+	if ( get_option( 'hkmo_db_version' ) === HKMO_DB_VERSION ) {
 		return;
 	}
 
 	HKMO_DB::create_table();
 	HKMO_DB::create_hashes_table();
-	update_option('hkmo_db_version', HKMO_DB_VERSION);
+	update_option( 'hkmo_db_version', HKMO_DB_VERSION );
 }
-add_action('plugins_loaded', 'hkmo_maybe_upgrade_db');
-
+add_action( 'plugins_loaded', 'hkmo_maybe_upgrade_db' );

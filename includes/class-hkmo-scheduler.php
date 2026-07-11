@@ -117,11 +117,11 @@ class HKMO_Scheduler {
 	 * @return array
 	 */
 	public function add_custom_schedules( $schedules ) {
-		$schedules['hkmo_weekly']  = array(
+		$schedules['hkmo_weekly']       = array(
 			'interval' => WEEK_IN_SECONDS,
 			'display'  => __( 'Once Weekly (HK Media Optimizer)', 'hk-media-optimizer' ),
 		);
-		$schedules['hkmo_monthly'] = array(
+		$schedules['hkmo_monthly']      = array(
 			'interval' => 30 * DAY_IN_SECONDS,
 			'display'  => __( 'Once Monthly (HK Media Optimizer)', 'hk-media-optimizer' ),
 		);
@@ -273,7 +273,7 @@ class HKMO_Scheduler {
 		if ( self::is_action_scheduler_available() && function_exists( 'as_next_scheduled_action' ) ) {
 			// First try with exact args and group used in reschedule()
 			$next_exact = as_next_scheduled_action( self::CRON_HOOK, array(), 'hkmo' );
-			$next_hook = as_next_scheduled_action( self::CRON_HOOK );
+			$next_hook  = as_next_scheduled_action( self::CRON_HOOK );
 
 			if ( $next_exact ) {
 				return (int) $next_exact;

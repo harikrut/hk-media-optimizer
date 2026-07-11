@@ -63,8 +63,8 @@ class HKMO_Ajax {
 		if ( get_transient( 'hkmo_scan_running' ) ) {
 			wp_send_json_error(
 				array(
-					'message'          => __( 'A scan is already in progress.', 'hk-media-optimizer' ),
-					'already_running'  => true,
+					'message'         => __( 'A scan is already in progress.', 'hk-media-optimizer' ),
+					'already_running' => true,
 				)
 			);
 		}
@@ -119,7 +119,7 @@ class HKMO_Ajax {
 		$this->verify_request();
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing
-		$status   = isset( $_POST['status'] ) ? sanitize_key( $_POST['status'] ) : 'unused';
+		$status = isset( $_POST['status'] ) ? sanitize_key( $_POST['status'] ) : 'unused';
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		$page     = isset( $_POST['page'] ) ? absint( $_POST['page'] ) : 1;
 		$per_page = 50;
@@ -153,13 +153,13 @@ class HKMO_Ajax {
 
 		wp_send_json_success(
 			array(
-				'items'           => $items,
-				'total'           => $total,
-				'page'            => $page,
-				'per_page'        => $per_page,
-				'reclaimable'     => HKMO_DB::get_reclaimable_size(),
-				'unused_count'    => HKMO_DB::count_results( 'unused' ),
-				'used_count'      => HKMO_DB::count_results( 'used' ),
+				'items'        => $items,
+				'total'        => $total,
+				'page'         => $page,
+				'per_page'     => $per_page,
+				'reclaimable'  => HKMO_DB::get_reclaimable_size(),
+				'unused_count' => HKMO_DB::count_results( 'unused' ),
+				'used_count'   => HKMO_DB::count_results( 'used' ),
 			)
 		);
 	}
@@ -205,7 +205,8 @@ class HKMO_Ajax {
 		wp_send_json_success( array( 'cancelled' => true ) );
 	}
 
-	/* ─────────────────────────────────────────────────────────────────────
+	/*
+	─────────────────────────────────────────────────────────────────────
 	 * Duplicate finder.
 	 * ───────────────────────────────────────────────────────────────────── */
 
@@ -326,7 +327,8 @@ class HKMO_Ajax {
 		wp_send_json_success( $result );
 	}
 
-	/* ─────────────────────────────────────────────────────────────────────
+	/*
+	─────────────────────────────────────────────────────────────────────
 	 * Scheduled scan.
 	 * ───────────────────────────────────────────────────────────────────── */
 

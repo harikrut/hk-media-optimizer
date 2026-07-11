@@ -1,0 +1,25 @@
+{
+	"name": "@harikrut/hk-media-optimizer",
+	"version": "1.0.0",
+	"description": "Lightweight, batch-based scanner that finds unused media files in your Media Library and lets you safely review and delete them.",
+	"author": "Harikrut Technolab",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://www.harikrut.com/plugins/hk-media-optimizer",
+	"engines": {
+		"node": ">=24"
+	},
+	"scripts": {
+		"lint:js": "wp-scripts lint-js assets/js",
+		"lint:js-fix": "wp-scripts lint-js assets/js --fix",
+		"makepot": "wpi18n makepot --domain-path languages --pot-file hk-media-optimizer.pot --main-file hk-media-optimizer.php --exclude vendor,node_modules,dist",
+		"env": "wp-env",
+		"env:start": "wp-env start",
+		"env:stop": "wp-env stop",
+		"env:destroy": "wp-env destroy"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^11.10.0",
+		"@wordpress/scripts": "^32.6.0",
+		"node-wp-i18n": "^1.2.8"
+	}
+}

@@ -26,32 +26,32 @@ class HKMO_Settings {
 	public static function get_defaults() {
 		return array(
 			// Scan sources - where to look for media usage.
-			'scan_post_content'    => 1,
-			'scan_featured_image'   => 1,
-			'scan_post_meta'        => 1,
-			'scan_widgets'           => 1,
-			'scan_customizer'        => 1,
-			'scan_acf_fields'        => 1,
-			'scan_attachment_parent' => 1,
-			'scan_site_icon_logo'    => 1,
+			'scan_post_content'        => 1,
+			'scan_featured_image'      => 1,
+			'scan_post_meta'           => 1,
+			'scan_widgets'             => 1,
+			'scan_customizer'          => 1,
+			'scan_acf_fields'          => 1,
+			'scan_attachment_parent'   => 1,
+			'scan_site_icon_logo'      => 1,
 
 			// Post statuses to include when scanning content.
-			'include_drafts'   => 1,
-			'include_trashed'  => 0,
-			'include_pending'  => 1,
-			'include_private'  => 1,
+			'include_drafts'           => 1,
+			'include_trashed'          => 0,
+			'include_pending'          => 1,
+			'include_private'          => 1,
 
 			// Safety / exclude rules.
-			'exclude_newer_than_days' => 7, // Don't flag files uploaded in the last N days.
+			'exclude_newer_than_days'  => 7, // Don't flag files uploaded in the last N days.
 			'exclude_mime_types'       => array(), // e.g. ['application/pdf'].
-			'exclude_folders'           => array(), // e.g. ['2024/logos'].
-			'whitelist_ids'             => array(), // Attachment IDs never flagged.
+			'exclude_folders'          => array(), // e.g. ['2024/logos'].
+			'whitelist_ids'            => array(), // Attachment IDs never flagged.
 
 			// Performance.
-			'batch_size' => 20, // Attachments processed per AJAX request.
+			'batch_size'               => 20, // Attachments processed per AJAX request.
 
 			// Deletion behavior.
-			'require_type_confirm' => 1, // Require typing DELETE to confirm bulk delete.
+			'require_type_confirm'     => 1, // Require typing DELETE to confirm bulk delete.
 
 			// Scheduled scans.
 			'enable_scheduled_scan'    => 0,        // Run scans automatically on a recurring schedule.

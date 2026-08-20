@@ -3,7 +3,7 @@
  * Plugin Name:       HK Media Optimizer
  * Plugin URI:        https://www.harikrut.com/plugins/hk-media-optimizer
  * Description:       Lightweight, batch-based scanner that finds unused media files in your Media Library and lets you safely review and delete them. Built to run on shared hosting without spiking server load.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            Harikrut Technolab
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HKMO_VERSION', '1.0.0' );
+define( 'HKMO_VERSION', '1.0.1' );
 define( 'HKMO_PLUGIN_FILE', __FILE__ );
 define( 'HKMO_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HKMO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

@@ -2,9 +2,9 @@
 Contributors: harikrut
 Tags: media optimizer, clean media library, delete unused images, unused media, optimize media
 Requires at least: 5.8
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,9 @@ Scheduled scans rely on WordPress's built-in cron, which only fires on a site vi
 5. Settings page with configurable scan sources, post status filters, safety rules, performance tuning, scheduled scans, and deletion safeguards.
 
 == Changelog ==
+
+== 1.0.1 ==
+* **Changed:** Bump WordPress "tested up to" version 7.1
 
 = 1.0.0 =
 * Initial release.
